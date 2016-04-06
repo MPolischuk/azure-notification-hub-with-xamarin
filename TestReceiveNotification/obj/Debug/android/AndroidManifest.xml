@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="testReceiveNotification.TestReceiveNotification" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <permission android:name="testReceiveNotification.TestReceiveNotification.permission.C2D_MESSAGE" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="testReceiveNotification.TestReceiveNotification.permission.C2D_MESSAGE" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <application android:label="TestReceiveNotification" android:name="mono.android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md58ab68d0f08a5192fcb24331511d04eac.GcmBroadcastReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="testReceiveNotification.TestReceiveNotification" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="testReceiveNotification.TestReceiveNotification" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.gcm.intent.RETRY" />
+        <category android:name="testReceiveNotification.TestReceiveNotification" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md58ab68d0f08a5192fcb24331511d04eac.PushHandlerService" />
+    <activity android:label="GCM Client Sample" android:launchMode="singleTask" android:name="md58ab68d0f08a5192fcb24331511d04eac.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="testReceiveNotification.TestReceiveNotification.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.testReceiveNotification.TestReceiveNotification" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using System.Text;
+using WindowsAzure.Messaging;
 using Android.App;
 using Android.Content;
 using Android.Util;
@@ -27,7 +30,7 @@ namespace Sample
         //  Be sure to get the right Project ID from your Google APIs Console.  It's not the named project ID that appears in the Overview,
         //  but instead the numeric project id in the url: eg: https://code.google.com/apis/console/?pli=1#project:785671162406:overview
         //  where 785671162406 is the project id, which is the SENDER_ID to use!
-        public static string[] SENDER_IDS = new string[] { "<SenderId>" };
+        public static string[] SENDER_IDS = new string[] { Configs.SenderID };
 
         public const string TAG = "PushSharp-GCM";
     }
@@ -38,6 +41,7 @@ namespace Sample
         public PushHandlerService() : base(GcmBroadcastReceiver.SENDER_IDS) { }
 
         const string TAG = "GCM-SAMPLE";
+        private NotificationHub Hub { get; set; }
 
         protected override void OnRegistered(Context context, string registrationId)
         {
@@ -47,6 +51,29 @@ namespace Sample
             //		"{ 'registrationId' : '" + registrationId + "' }");
 
             createNotification("GCM Registered...", "The device has been Registered, Tap to View!");
+
+            Hub = new NotificationHub(Configs.NotificationHubName, Configs.ListenConnectionString,
+                                        context);
+            try
+            {
+                Hub.UnregisterAll(registrationId);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(TAG, ex.Message);
+            }
+
+            //var tags = new List<string>() { "falcons" }; // create tags if you want
+            var tags = new List<string>() { };
+
+            try
+            {
+                var hubRegistration = Hub.Register(registrationId, tags.ToArray());
+            }
+            catch (Exception ex)
+            {
+                Log.Error(TAG, ex.Message);
+            }
         }
 
         protected override void OnUnRegistered(Context context, string registrationId)
@@ -78,7 +105,17 @@ namespace Sample
             edit.PutString("last_msg", msg.ToString());
             edit.Commit();
 
-            createNotification("GCM Sample", "Message Received for GCM Sample... Tap to View!");
+            string messageText = intent.Extras.GetString("message");
+            if (!string.IsNullOrEmpty(messageText))
+            {
+                createNotification("Nuevo mensaje desde HUB!", messageText);
+            }
+            else
+            {
+                createNotification("Unknown message details", msg.ToString());
+            }
+
+            //createNotification("GCM Sample", "Message Received for GCM Sample... Tap to View!");
         }
 
         protected override bool OnRecoverableError(Context context, string errorId)

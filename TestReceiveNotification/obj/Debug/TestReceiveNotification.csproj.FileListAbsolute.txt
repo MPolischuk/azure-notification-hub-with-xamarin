@@ -1,0 +1,17 @@
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\TestReceiveNotification.dll
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\TestReceiveNotification.pdb
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\testReceiveNotification.TestReceiveNotification.apk
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\testReceiveNotification.TestReceiveNotification-Signed.apk
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\GCM.Client.dll
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\Microsoft.WindowsAzure.Messaging.Android.dll
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\TestReceiveNotification.csprojResolveAssemblyReference.cache
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\TestReceiveNotification.dll
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\TestReceiveNotification.pdb
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\android\bin\testReceiveNotification.TestReceiveNotification.apk
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\res\layout\main.xml
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\res\values\strings.xml
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\res\drawable\icon.png
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\R.cs.flag
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\uploadflags.txt
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\TestReceiveNotification.dll.mdb
+D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\TestReceiveNotification.dll.mdb
