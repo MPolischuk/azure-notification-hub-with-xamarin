@@ -4,10 +4,35 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <TextView
+        android:id="@+id/textHintsTags"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione uno o mas tags." />
+    <CheckBox
+        android:id="@+id/checkboxRiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="River" />
+    <CheckBox
+        android:id="@+id/checkboxBoca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boca" />
+    <CheckBox
+        android:id="@+id/checkboxTodos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Todos" />
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar" />
+    <TextView
         android:id="@+id/textRegistrationStatus"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Registered: No"
+        android:text="Registrado: No"
         android:paddingBottom="5dp" />
     <TextView
         android:id="@+id/textRegistrationId"
@@ -19,15 +44,10 @@
         android:id="@+id/textLastMessage"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Last Msg: N/A" />
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Register..." />
+        android:text="Ultimo Mensaje: N/A" />
     <TextView
         android:id="@+id/textHints"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="NOTE: The values above are only updated AFTER you tap a notification!" />
+        android:text="NOTA: Los valores de arriba solamente son actualizados cuando se toca la notificación!." />
 </LinearLayout>

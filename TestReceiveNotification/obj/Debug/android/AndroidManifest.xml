@@ -27,7 +27,7 @@
       </intent-filter>
     </receiver>
     <service android:name="md58ab68d0f08a5192fcb24331511d04eac.PushHandlerService" />
-    <activity android:label="GCM Client Sample" android:launchMode="singleTask" android:name="md58ab68d0f08a5192fcb24331511d04eac.MainActivity">
+    <activity android:label="Hub Client Sample" android:launchMode="singleTask" android:name="md58ab68d0f08a5192fcb24331511d04eac.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

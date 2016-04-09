@@ -8,61 +8,71 @@ using Android.Widget;
 using Android.OS;
 using Android.Util;
 using Gcm.Client;
+using TestReceiveNotification;
 
 namespace Sample
 {
-    [Activity(Label = "GCM Client Sample", MainLauncher = true,
+    [Activity(Label = "Hub Client Sample", MainLauncher = true,
         LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
     public class MainActivity : Activity
     {
-        //NOTE: You need to put your own email here!
-        // Whichever one you registered as the 'Role' email with google
         const string TAG = "GCM-CLIENT";
 
-        TextView textRegistrationStatus = null;
-        TextView textRegistrationId = null;
-        TextView textLastMsg = null;
-        Button buttonRegister = null;
-        bool registered = false;
+        TextView textRegistrationStatus;
+        TextView textRegistrationId;
+        TextView textLastMsg;
+        Button buttonRegister;
+        CheckBox checkBoxRiver;
+        CheckBox checkBoxBoca;
+        CheckBox checkBoxTodos;
+        bool registered;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
+            // Seteamos nuestra vista desde el "main" Layout 
             SetContentView(TestReceiveNotification.Resource.Layout.Main);
 
             textRegistrationStatus = FindViewById<TextView>(TestReceiveNotification.Resource.Id.textRegistrationStatus);
             textRegistrationId = FindViewById<TextView>(TestReceiveNotification.Resource.Id.textRegistrationId);
             textLastMsg = FindViewById<TextView>(TestReceiveNotification.Resource.Id.textLastMessage);
             buttonRegister = FindViewById<Button>(TestReceiveNotification.Resource.Id.buttonRegister);
+            checkBoxRiver = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxRiver);
+            checkBoxBoca = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxBoca);
+            checkBoxTodos = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxTodos);
 
             Log.Info(TAG, "Hello World");
 
-            //Check to ensure everything's setup right
+            //Verificamos que todo se haya configurado adecuadamente
             GcmClient.CheckDevice(this);
             GcmClient.CheckManifest(this);
 
 
-            this.buttonRegister.Click += delegate
+            buttonRegister.Click += delegate
             {
                 if (!registered)
                 {
                     Log.Info(TAG, "Registering...");
 
-                    //Call to register
+                    //Seteamos los tags segun la selección actual
+                    Configs.TagRiver = checkBoxRiver.Checked;
+                    Configs.TagBoca = checkBoxBoca.Checked;
+                    Configs.TagTodos = checkBoxTodos.Checked;
+
+                    //Llamamos al metodo Register (enviandole nuestro sender Id)
                     GcmClient.Register(this, GcmBroadcastReceiver.SENDER_IDS);
                 }
                 else
                 {
                     Log.Info(TAG, "Unregistering...");
 
-                    //Call to unregister
+                    //Llamamos al metodo Unregister
                     GcmClient.UnRegister(this);
                 }
 
-                //Disable the button so multiple register requests don't happen
-                RunOnUiThread(() => this.buttonRegister.Enabled = false);
+                //Desabilitamos el boton para impedir multiples peticiones 
+                RunOnUiThread(() => buttonRegister.Enabled = false);
             };
         }
 
@@ -70,39 +80,40 @@ namespace Sample
         {
             base.OnResume();
 
-            updateView();
+            //Se ejecuta al presionar en la notificación
+            UpdateView();
         }
 
-        void updateView()
+        void UpdateView()
         {
-            //Get the stored latest registration id
+            //Obtenemos el ultimo Id registrado
             var registrationId = GcmClient.GetRegistrationId(this);
 
             //If it's empty, we need to register
             if (string.IsNullOrEmpty(registrationId))
             {
                 registered = false;
-                this.textRegistrationStatus.Text = "Registered: No";
-                this.textRegistrationId.Text = "Id: N/A";
-                this.buttonRegister.Text = "Register...";
+                textRegistrationStatus.Text = "Registrado: No";
+                textRegistrationId.Text = "Id: N/A";
+                buttonRegister.Text = "Registrar";
 
                 Log.Info(TAG, "Not registered...");
             }
             else
             {
                 registered = true;
-                this.textRegistrationStatus.Text = "Registered: Yes";
-                this.textRegistrationId.Text = "Id: " + registrationId;
-                this.buttonRegister.Text = "Unregister...";
+                textRegistrationStatus.Text = "Registrado: Yes";
+                textRegistrationId.Text = "Id: " + registrationId;
+                buttonRegister.Text = "Eliminar Registro";
 
-                Log.Info(TAG, "Already Registered: " + registrationId);
+                Log.Info(TAG, "Ya está registrado: " + registrationId);
             }
 
-            var prefs = GetSharedPreferences(this.PackageName, FileCreationMode.Private);
-            this.textLastMsg.Text = "Last Msg: " + prefs.GetString("last_msg", "N/A");
+            var prefs = GetSharedPreferences(PackageName, FileCreationMode.Private);
+            textLastMsg.Text = "Ultimo Mensaje: " + prefs.GetString("last_msg", "N/A");
 
-            //Enable the button as it was normally disabled
-            this.buttonRegister.Enabled = true;
+            //Habilitamos el boton de registro
+            buttonRegister.Enabled = true;
         }
     }
 }
