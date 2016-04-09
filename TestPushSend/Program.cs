@@ -1,22 +1,22 @@
 ﻿using System;
-using Microsoft.Azure.NotificationHubs;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace TestPushSend
+namespace FormPushSend
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            SendNotificationAsync();
-            Console.ReadLine();
-        }
-
-        private static async void SendNotificationAsync()
-        {
-            NotificationHubClient hub = NotificationHubClient.CreateClientFromConnectionString(
-                "<ConnectionStringWithFullAccess>",
-                "<HubName>");
-            await hub.SendGcmNativeNotificationAsync("{ \"data\" : {\"message\":\"Probando Notificaciones desde Azure!\"}}");
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormTestPush());
         }
     }
 }

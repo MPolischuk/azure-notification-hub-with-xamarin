@@ -1,2 +1,0 @@
-D:\DEV-Marcos\Azure Notification Hubs\TestPushSend\bin\Debug\TestPushSend.exe.config
-D:\DEV-Marcos\GitHubRepos\azure-notification-hub-with-xamarin\TestPushSend\bin\Debug\TestPushSend.exe.config
