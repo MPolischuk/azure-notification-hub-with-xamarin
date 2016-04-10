@@ -1,11 +1,11 @@
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\TestReceiveNotification.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\GCM.Client.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\Microsoft.WindowsAzure.Messaging.Android.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\Mono.Android.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\mscorlib.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.Core.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.Xml.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.Xml.Linq.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.Runtime.Serialization.dll
-D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\assemblies\System.ServiceModel.Internals.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\TestReceiveNotification.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\GCM.Client.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\Microsoft.WindowsAzure.Messaging.Android.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\Mono.Android.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\mscorlib.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.Core.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.Xml.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.Runtime.Serialization.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\assemblies\System.ServiceModel.Internals.dll

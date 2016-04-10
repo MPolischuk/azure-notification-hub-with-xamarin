@@ -4,6 +4,8 @@ using System.Text;
 using WindowsAzure.Messaging;
 using Android.App;
 using Android.Content;
+using Android.Media;
+using Android.OS;
 using Android.Util;
 using Gcm.Client;
 using TestReceiveNotification;
@@ -16,7 +18,7 @@ using TestReceiveNotification;
 namespace Sample
 {
     [BroadcastReceiver(Permission = Constants.PERMISSION_GCM_INTENTS)]
-    [IntentFilter(new[] { Intent.ActionBootCompleted })] 
+    [IntentFilter(new[] { Intent.ActionBootCompleted })]
     [IntentFilter(new string[] { Constants.INTENT_FROM_GCM_MESSAGE }, Categories = new string[] { "@PACKAGE_NAME@" })]
     [IntentFilter(new string[] { Constants.INTENT_FROM_GCM_REGISTRATION_CALLBACK }, Categories = new string[] { "@PACKAGE_NAME@" })]
     [IntentFilter(new string[] { Constants.INTENT_FROM_GCM_LIBRARY_RETRY }, Categories = new string[] { "@PACKAGE_NAME@" })]
@@ -53,7 +55,7 @@ namespace Sample
             {
                 Log.Error(TAG, ex.Message);
             }
-            
+
             //Creamos array de tags según la seleccion del usuario
             var tags = CrearTags();
 
@@ -128,8 +130,12 @@ namespace Sample
             var notification = new Notification(Android.Resource.Drawable.SymActionEmail, title)
             {
                 //Auto-cancel removera la notificacion cuando el usuario la toque.
-                Flags = NotificationFlags.AutoCancel
+                Flags = NotificationFlags.AutoCancel,
+                Sound = RingtoneManager.GetDefaultUri(RingtoneType.Notification),
+                Vibrate = new long[] {1000,0,1000}            
             };
+
+            notification.Defaults = NotificationDefaults.All;
 
             //Seteamos la informacion de la notificación
             notification.SetLatestEventInfo(this, title, desc, PendingIntent.GetActivity(this, 0, uiIntent, 0));

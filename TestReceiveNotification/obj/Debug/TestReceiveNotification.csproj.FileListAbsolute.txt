@@ -15,3 +15,20 @@ D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNot
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\uploadflags.txt
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\TestReceiveNotification.dll.mdb
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\bin\Debug\TestReceiveNotification.dll.mdb
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\TestReceiveNotification.csprojResolveAssemblyReference.cache
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\TestReceiveNotification.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\TestReceiveNotification.pdb
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\TestReceiveNotification.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\TestReceiveNotification.pdb
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\testReceiveNotification.TestReceiveNotification.apk
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\testReceiveNotification.TestReceiveNotification-Signed.apk
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\GCM.Client.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\Microsoft.WindowsAzure.Messaging.Android.dll
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\android\bin\testReceiveNotification.TestReceiveNotification.apk
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\res\layout\main.xml
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\res\values\strings.xml
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\res\drawable\icon.png
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\R.cs.flag
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\uploadflags.txt
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\TestReceiveNotification.dll.mdb
+D:\DEV-Juan\Azure.NotificationHubs\TestReceiveNotification\bin\Debug\TestReceiveNotification.dll.mdb
