@@ -93,6 +93,9 @@ namespace Sample
             var prefs = GetSharedPreferences(context.PackageName, FileCreationMode.Private);
             var edit = prefs.Edit();
             edit.PutString("last_msg", msg.ToString());
+            edit.PutBoolean("tagRiver", Configs.TagRiver);
+            edit.PutBoolean("tagBoca", Configs.TagBoca);
+            edit.PutBoolean("tagTodos", Configs.TagTodos);
             edit.Commit();
 
             string messageText = intent.Extras.GetString("message");
@@ -127,7 +130,7 @@ namespace Sample
             var uiIntent = new Intent(this, typeof(MainActivity));
 
             //Creamos la notificación (aparecera con el logo de e-mail)
-            var notification = new Notification(Android.Resource.Drawable.SymActionEmail, title)
+            var notification = new Notification(TestReceiveNotification.Resource.Drawable.football_icon25x25, title)
             {
                 //Auto-cancel removera la notificacion cuando el usuario la toque.
                 Flags = NotificationFlags.AutoCancel,

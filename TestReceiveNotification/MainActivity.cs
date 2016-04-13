@@ -111,6 +111,9 @@ namespace Sample
 
             var prefs = GetSharedPreferences(PackageName, FileCreationMode.Private);
             textLastMsg.Text = "Ultimo Mensaje: " + prefs.GetString("last_msg", "N/A");
+            checkBoxRiver.Checked = prefs.GetBoolean("tagRiver", false);
+            checkBoxBoca.Checked = prefs.GetBoolean("tagBoca", false);
+            checkBoxTodos.Checked = prefs.GetBoolean("tagTodos", false);
 
             //Habilitamos el boton de registro
             buttonRegister.Enabled = true;
