@@ -29,7 +29,7 @@ namespace Sample
         public const string TAG = "PushSharp-GCM";
     }
 
-    [Service] //Must use the service tag
+    [Service] //Debe usar el service tag
     public class PushHandlerService : GcmServiceBase
     {
         public PushHandlerService() : base(GcmBroadcastReceiver.SENDER_IDS) { }
@@ -61,12 +61,19 @@ namespace Sample
 
             try
             {
-                var hubRegistration = Hub.Register(registrationId, tags.ToArray());
+                Hub.Register(registrationId, tags.ToArray());
             }
             catch (Exception ex)
             {
                 Log.Error(TAG, ex.Message);
             }
+
+            //Guardamos el mensaje
+            var prefs = GetSharedPreferences(context.PackageName, FileCreationMode.Private);
+            var edit = prefs.Edit();
+            edit.PutBoolean("tagRiver", Configs.TagRiver);
+            edit.PutBoolean("tagBoca", Configs.TagBoca);
+            edit.Commit();
         }
 
         protected override void OnUnRegistered(Context context, string registrationId)
@@ -93,9 +100,6 @@ namespace Sample
             var prefs = GetSharedPreferences(context.PackageName, FileCreationMode.Private);
             var edit = prefs.Edit();
             edit.PutString("last_msg", msg.ToString());
-            edit.PutBoolean("tagRiver", Configs.TagRiver);
-            edit.PutBoolean("tagBoca", Configs.TagBoca);
-            edit.PutBoolean("tagTodos", Configs.TagTodos);
             edit.Commit();
 
             string messageText = intent.Extras.GetString("message");
@@ -157,10 +161,6 @@ namespace Sample
             if (Configs.TagBoca)
             {
                 tags.Add("Boca");
-            }
-            if (Configs.TagTodos)
-            {
-                tags.Add("Todos");
             }
 
             return tags;

@@ -26,3 +26,17 @@ D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestPushSend\o
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestPushSend\obj\Debug\FormPushSend.FormTestPush.resources
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestPushSend\obj\Debug\FormPushSend.Properties.Resources.resources
 D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestPushSend\obj\Debug\FormPushSend.csproj.GenerateResource.Cache
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\FormPushSend.exe.config
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.exe
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.pdb
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\FormPushSend.exe
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\FormPushSend.pdb
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\Microsoft.Azure.NotificationHubs.dll
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\Newtonsoft.Json.dll
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\Microsoft.Azure.NotificationHubs.xml
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\bin\Debug\Newtonsoft.Json.xml
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.csprojResolveAssemblyReference.cache
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.FormTestPush.resources
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.Properties.Resources.resources
+D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestPushSend\obj\Debug\FormPushSend.csproj.GenerateResource.Cache

@@ -40,7 +40,6 @@ namespace Sample
             buttonRegister = FindViewById<Button>(TestReceiveNotification.Resource.Id.buttonRegister);
             checkBoxRiver = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxRiver);
             checkBoxBoca = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxBoca);
-            checkBoxTodos = FindViewById<CheckBox>(TestReceiveNotification.Resource.Id.checkboxTodos);
 
             Log.Info(TAG, "Hello World");
 
@@ -58,7 +57,6 @@ namespace Sample
                     //Seteamos los tags segun la selección actual
                     Configs.TagRiver = checkBoxRiver.Checked;
                     Configs.TagBoca = checkBoxBoca.Checked;
-                    Configs.TagTodos = checkBoxTodos.Checked;
 
                     //Llamamos al metodo Register (enviandole nuestro sender Id)
                     GcmClient.Register(this, GcmBroadcastReceiver.SENDER_IDS);
@@ -113,7 +111,6 @@ namespace Sample
             textLastMsg.Text = "Ultimo Mensaje: " + prefs.GetString("last_msg", "N/A");
             checkBoxRiver.Checked = prefs.GetBoolean("tagRiver", false);
             checkBoxBoca.Checked = prefs.GetBoolean("tagBoca", false);
-            checkBoxTodos.Checked = prefs.GetBoolean("tagTodos", false);
 
             //Habilitamos el boton de registro
             buttonRegister.Enabled = true;

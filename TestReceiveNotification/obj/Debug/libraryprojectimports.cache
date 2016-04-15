@@ -2,13 +2,13 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>D:\Documentos Marcos\GitRepos\azure-notification-hub-with-xamarin\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\DEV-Juan\GitRepository\Azure.NotificationHubs\TestReceiveNotification\obj\Debug\__library_projects__\GCM.Client.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

@@ -13,17 +13,18 @@ namespace FormPushSend
 {
     public partial class FormTestPush : Form
     {
+        public NotificationHubClient NotificationHubClient { get; set; }
+
         public FormTestPush()
         {
             InitializeComponent();
+            NotificationHubClient = NotificationHubClient.CreateClientFromConnectionString(
+           "<ListenFullConnectionString>",
+           "<HubName>");
         }
-        
+
         private async void btnEnviar_Click(object sender, EventArgs e)
         {
-            NotificationHubClient hub = NotificationHubClient.CreateClientFromConnectionString(
-                "<FullSharedAccessConnectionString>",
-                "<HubName>");
-
             var tags = new List<string>() { };
             if (rbRiver.Checked)
             {
@@ -35,14 +36,23 @@ namespace FormPushSend
             }
             if (rbTodos.Checked)
             {
-                tags.Add("Todos");
+                await
+                    NotificationHubClient.SendGcmNativeNotificationAsync("{ \"data\" : {\"message\":\"" + tvMensaje.Text +
+                                                                         "\"}}");
+                MessageBox.Show("El mensaje se ha enviado exitosamente", "Mensaje Enviado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Question);
+            }
+            else
+            {
+                await NotificationHubClient.SendGcmNativeNotificationAsync("{ \"data\" : {\"message\":\"" + tvMensaje.Text + "\"}}", tags);
+                MessageBox.Show("El mensaje se ha enviado exitosamente", "Mensaje Enviado",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Question);
             }
 
-            var enviando = await hub.SendGcmNativeNotificationAsync("{ \"data\" : {\"message\":\"" + tvMensaje.Text + "\"}}", tags);
-            MessageBox.Show("El mensaje se ha enviado exitosamente", "Mensaje Enviado",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Question);
+     
         }
-        
+
     }
 }
