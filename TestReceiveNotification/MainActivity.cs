@@ -24,7 +24,6 @@ namespace Sample
         Button buttonRegister;
         CheckBox checkBoxRiver;
         CheckBox checkBoxBoca;
-        CheckBox checkBoxTodos;
         bool registered;
 
         protected override void OnCreate(Bundle bundle)
@@ -109,8 +108,8 @@ namespace Sample
 
             var prefs = GetSharedPreferences(PackageName, FileCreationMode.Private);
             textLastMsg.Text = "Ultimo Mensaje: " + prefs.GetString("last_msg", "N/A");
-            checkBoxRiver.Checked = prefs.GetBoolean("tagRiver", false);
-            checkBoxBoca.Checked = prefs.GetBoolean("tagBoca", false);
+            //checkBoxRiver.Checked = prefs.GetBoolean("tagRiver", false);
+            //checkBoxBoca.Checked = prefs.GetBoolean("tagBoca", false);
 
             //Habilitamos el boton de registro
             buttonRegister.Enabled = true;

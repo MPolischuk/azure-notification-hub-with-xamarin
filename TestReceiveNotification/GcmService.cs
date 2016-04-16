@@ -49,6 +49,7 @@ namespace Sample
                                         context);
             try
             {
+                //Hub.Unregister();
                 Hub.UnregisterAll(registrationId);
             }
             catch (Exception ex)
@@ -67,13 +68,6 @@ namespace Sample
             {
                 Log.Error(TAG, ex.Message);
             }
-
-            //Guardamos el mensaje
-            var prefs = GetSharedPreferences(context.PackageName, FileCreationMode.Private);
-            var edit = prefs.Edit();
-            edit.PutBoolean("tagRiver", Configs.TagRiver);
-            edit.PutBoolean("tagBoca", Configs.TagBoca);
-            edit.Commit();
         }
 
         protected override void OnUnRegistered(Context context, string registrationId)
@@ -100,6 +94,8 @@ namespace Sample
             var prefs = GetSharedPreferences(context.PackageName, FileCreationMode.Private);
             var edit = prefs.Edit();
             edit.PutString("last_msg", msg.ToString());
+            //edit.PutBoolean("tagRiver", Configs.TagRiver);
+            //edit.PutBoolean("tagBoca", Configs.TagBoca);
             edit.Commit();
 
             string messageText = intent.Extras.GetString("message");
