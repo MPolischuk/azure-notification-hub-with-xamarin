@@ -19,8 +19,8 @@ namespace FormPushSend
         {
             InitializeComponent();
             NotificationHubClient = NotificationHubClient.CreateClientFromConnectionString(
-           "Endpoint=sb://testhubnamesp.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=XiKW2cHuSiiIpVS5WCQdxzCW/8XfSo+VExbwHKb4l/o=",
-           "TestHub");
+           "<ListenFullCOnnectionString>",
+           "<HubName>");
         }
 
         private async void btnEnviar_Click(object sender, EventArgs e)
